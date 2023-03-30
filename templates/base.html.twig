@@ -14,9 +14,11 @@
         {% endblock %}
     </head>
     <body>
+    <div class="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900">
         {% include "movie/partials/_header.html.twig" %}
         {% include "movie/partials/_heros.html.twig" %}
         {% block body %}{% endblock %}
         {% include "movie/partials/_footer.html.twig" %}
+    </div>    
     </body>
 </html>

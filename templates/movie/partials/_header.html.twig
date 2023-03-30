@@ -1,21 +1,34 @@
-<div class="navbar bg-base-100">
-  <div class="flex-1">
-    <a class="btn btn-ghost normal-case text-5xl font-black text-red-500">SHM</a>
-  </div>
-  <div class="flex-none">
-    <ul class="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
-      <li tabindex="0">
-        <a>
-          Parent
-          <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
-        </a>
-        <ul class="p-2 bg-base-100">
-          <li><a>Submenu 1</a></li>
-          <li><a>Submenu 2</a></li>
+<div class="navbar bg-transparent">
+    <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-5xl font-black text-red-600">SHM</a>
+    </div>
+    <div class="flex-none">
+        <ul class="menu menu-horizontal px-1">
+            <li>
+                <div class="form-control">
+    <div class="input-group">
+        <input type="text" placeholder="Recherche ton film…" class="input input-bordered" />
+        <button class="btn btn-square">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+        </button>
+    </div>
+</div></a></li>    
+        <li>
+        <div class="form-control">
+            <div class="input-group">
+                <select class="select select-bordered">
+                <option disabled selected>Choisir un type de film</option>
+                <option>Dessins animés</option>
+                <option>Sciences fictions</option>
+                <option>Héroines</option>
+                <option>Superman</option>
+                <option>Batman</option>
+                </select>
+                <button class="btn">Go</button>
+            </div>
+            </div>
+        </li>  
+        <li><a class="text-red-600 font-bold text-3xl">Connexion</a></li>
         </ul>
-      </li>
-      <li><a>Connexion</a></li>
-    </ul>
-  </div>
+    </div>
 </div>
