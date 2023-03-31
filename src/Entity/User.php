@@ -29,6 +29,21 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private ?string $password = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $fname = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $lname = null;
+
+    #[ORM\Column]
+    private ?int $age = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $address = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $favorite_hero = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -97,5 +112,65 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getFname(): ?string
+    {
+        return $this->fname;
+    }
+
+    public function setFname(string $fname): self
+    {
+        $this->fname = $fname;
+
+        return $this;
+    }
+
+    public function getLname(): ?string
+    {
+        return $this->lname;
+    }
+
+    public function setLname(string $lname): self
+    {
+        $this->lname = $lname;
+
+        return $this;
+    }
+
+    public function getAge(): ?int
+    {
+        return $this->age;
+    }
+
+    public function setAge(int $age): self
+    {
+        $this->age = $age;
+
+        return $this;
+    }
+
+    public function getAddress(): ?string
+    {
+        return $this->address;
+    }
+
+    public function setAddress(string $address): self
+    {
+        $this->address = $address;
+
+        return $this;
+    }
+
+    public function getFavoriteHero(): ?string
+    {
+        return $this->favorite_hero;
+    }
+
+    public function setFavoriteHero(string $favorite_hero): self
+    {
+        $this->favorite_hero = $favorite_hero;
+
+        return $this;
     }
 }
