@@ -1,23 +1,24 @@
-{% extends"base.html.twig" %}
-
-{% block title %}
-{{ post.title }}
-{% endblock %}
-
-{# content #}
+{% extends 'base.html.twig' %}
 {% block body %}
-<div class="card max-w-sm bg-zinc-200 shadow-xl">
-<h1 class="text-indigo-700 text-3xl uppercase font-bold pb-4">{{ post.title }}</h1>
-<div class="">
-    <img src="{{ post.urlImg }}" alt="{{ post.title}}" />
+
+
+<div class="card card-side shadow-xl  m-20 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900">
+<figure><img src="{{post.image}}" alt="post"/></figure>
+
+<div class="card-body bg-zinc-200 rounded-xl m-20 text-red-500">
+
+<h2 class="card-title text-red-500  font-bold uppercase">{{post.title}}</h2>
+
+<p>Realisateur:<br> {{post.author}}</p>
+{# <p>{{post.année_de_sortie}}</p> #}
+<p>Style de film:<br> {{post.category}}</p>
+<p>Synopsis:<br>{{post.description}}</p>
+
+        <div class="card-actions justify-end">
+            <a class="btn btn-primary" href="{{path('app_update', {'id':post.id})}}">modifier</a> 
+            <a class="btn btn-error" href="{{path('app_delete', {'id':post.id})}}">supprimer</a>
+        </div>
     </div>
-<div class="mt-4 m-auto w-full max-w-sm  text-indigo-700">
-<p>{{ post.content}}</p>
-<p class="italic pt-6 text-gray-500">{% if post.author %}</p>
 </div>
-{% if app.user %}
-    <div class="my-2 space-x-8">
-        <a href="{{ path ('app_update', {'id': post.id}) }}" class="btn btn-primary">Modifier</a>
-        <a href="{{ path ('app_delete', {'id': post.id}) }}" class="btn btn-error">Supprimer</a>
-    </div>
-{% endif %}
+
+{% endblock %}
