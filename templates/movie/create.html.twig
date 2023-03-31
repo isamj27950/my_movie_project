@@ -1,6 +1,13 @@
-<div >
+{% extends"base.html.twig" %}
 
-    {{form_start(showForm)}}
+{% block title %}
+Accueil
+{% endblock %}
+{% block body %}
+<h1 class="text-red-500 text-5xl text-center font-bold pb-4">Ajouter un film</h1>
+<div class="card-body bg-zinc-200 rounded-xl m-24 text-red-500" >
+
+    {{form_start(showForm, {'attr' :  {'class':'form'}})}}
     {{form_widget(showForm, {'attr': {'novalidate': 'novalidate'}})}}
     <div>
         <input type="submit" value="envoyer" class="btn btn-secondary">
@@ -9,3 +16,4 @@
 
 
 </div>
+{% endblock %}

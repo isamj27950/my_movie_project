@@ -30,7 +30,9 @@
             </div>
             </div>
         </li>  
-        <li><a class="text-red-600 font-bold text-3xl">Connexion</a></li>
+        <li><a class="text-red-600 font-bold text-3xl" href="/{{ app.user ?'logout' :'login'}}">
+                    {{ app.user ? 'Déconnexion': 'Connexion'}}
+            </a></li>
         </ul>
     </div>
 </div>

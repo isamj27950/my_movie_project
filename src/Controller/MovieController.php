@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\File\Exception\FileException;
 
 class MovieController extends AbstractController
 {
-    #[Route('/movie', name: 'app_movie')]
+    #[Route('/', name: 'app_movie')]
     public function index(MovieRepository $repo): Response
     {
         $posts= $repo->findAll();

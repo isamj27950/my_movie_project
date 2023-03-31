@@ -22,7 +22,7 @@ class MovieFormType extends AbstractType
         $builder
             ->add('title',TextType::class,[
                 'attr'  => [
-                    'class' =>'form',
+                    'class' =>'form'
                 ],
                 'label'=> 'Titre du film',
                 'constraints' => [
