@@ -130,7 +130,7 @@ class MovieController extends AbstractController
             
             //$post->setUpdatedAt(new DateTimeImmutable());
             $em->flush();
-            return $this->redirectToRoute('app_home');
+            return $this->redirectToRoute('app_movie');
         }
         //3-envoie du formulaire ds la vue
         return $this->render('movie/update.html.twig',[
